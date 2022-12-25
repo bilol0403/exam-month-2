@@ -1,0 +1,29 @@
+@mixin display($display, $justify, $align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin text ($font-size, $line-hight){
+    font-size: $font-size;
+    line-height: $line-hight;
+}
+@mixin font($family:'Public Sans', $style:normal, $weight:700){
+    font-family: $family;
+    font-style:$style ;
+    font-weight:$weight;
+}
+%title__font{
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+}
+%sub__font{
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+%sub__font2{
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+}

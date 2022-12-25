@@ -1,0 +1,85 @@
+.intro{
+    position: relative;
+    &__img{
+        position: absolute;
+        top: -160px;
+        left: 110px;
+    }
+    &__title{
+        width: 327px;
+        padding-top: 165px;
+        text-align: center;
+        @extend %title__font;
+        @include text(32px,36px);
+        color:$title-color;
+    }
+    &__label{
+        padding: 16px 115px 16px 23px;
+        opacity: 0.5;
+        border: none;
+        background: #FBFCFE;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+    }
+    &__btn{
+        margin-top: 16px;
+        padding: 16px 100px;
+        &:hover{
+            background-color: $btn-active;
+        }
+    }
+    &__text{
+        padding: 24px 44px;
+        @extend %sub__font;
+        @include text(15px, 18px);
+        color:$sub-color;
+    }
+}
+@media only screen and (min-width:500px){
+    .intro{
+        &__img{
+            left:300px;
+        }
+        &__title{
+            width: 573px;
+            padding-left: 66px;
+            @include text(48px,56px);
+        }
+        &__form{
+           padding-left: 100px; 
+        }
+        &__btn{
+            position: absolute;
+            top: 293px;
+            left: 391px;
+            padding: 16px 26px;
+        }
+        &__text{
+            padding-left: 220px;
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .intro{
+        &__img{
+            left:875px;
+            top: 150px;
+
+        }
+        &__title{
+            width: 385px;
+            padding-left: 0;
+            text-align: left;
+        }
+        &__form{
+            padding-left: 0;
+        }
+        &__btn{
+            left: 330px;
+            top: 350px;
+        }
+        &__text{
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #EDF3F8;
+}
+ul{
+    list-style-type:none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+button{
+    @extend %sub__font2;
+    border: none;
+    cursor: pointer;
+    color: #FBFCFE;
+    background: $btn-color;
+    border-radius: 24px;
+    &:active{
+        background-color: $btn-active;
+    }
+}
