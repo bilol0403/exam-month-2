@@ -1,0 +1,35 @@
+.box{
+    margin-top: 80px;
+    &__list{
+        text-align: center;
+    }
+    &__title{
+        padding-top: 33px;
+        padding-bottom: 16px;
+        @extend %sub__font2;
+        @include text(18px,25px);
+        color:$title-color;
+    }
+    &__text{
+        width: 328px;
+        padding-bottom: 48px;
+        @extend %sub__font;
+        @include text(15px,25px);
+        color:$sub-color;
+    }
+}
+@media only screen and (min-width:500px){
+    .box{
+        display: flex;
+        &__text{
+            width: 223px;
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .box{
+        &__text{
+            width: 350px;
+        }
+    }
+}

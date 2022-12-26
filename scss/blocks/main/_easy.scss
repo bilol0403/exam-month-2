@@ -1,0 +1,89 @@
+.easy{
+    margin-top: 80px;
+    position: relative;
+    &__top{
+        position:absolute;
+        padding: 8px 11px;
+        left: 36px;
+        background: #2E3F4D;
+        border-radius: 8px 8px 0px 0px;
+    }
+    &__circle{
+        
+        position: relative;
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        background-color:#BA4270;
+        border-radius: 50%;
+        &:nth-child(2){
+            background-color: #527695;
+        }
+        &:last-child{
+            background: #36536B;
+        }
+    }
+    &__code{
+        margin-left: -11px;
+        margin-right: -11px;
+        margin-bottom: -11px;
+       @extend %title__font;
+       @include text(12px,18px);
+       color: #FBFCFE;
+       background:$section-color ;
+       box-shadow: 25px 25px 80px rgba(54, 83, 107, 0.300727);
+       border-radius: 8px;
+    }
+    &__title{
+        position: absolute;
+        top: 252px;
+        left: 40px;
+        text-align: center;
+        @extend %title__font;
+        @include text(36px,36px);
+        letter-spacing: -0.276923px;
+        color:$title-color;
+    }
+    &__text{
+        position:absolute;
+        top: 290px;
+        margin-top: 24px;
+        width: 328px;
+        text-align: center;
+        @extend %sub__font;
+        @include text(15px,28px);
+        color:$sub-color;
+    }
+}
+@media only screen and (min-width:500px){
+    .easy{
+        &__top{
+            left:240px;
+        }
+        &__title{
+            left: 240px;
+        }
+        &__text{
+            width: 573px;
+            left: 100px;
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .easy{
+        &__top{
+            left: 0;
+        }
+        &__title{
+            left: 500px;
+            top: 23px;
+            @include text(48px,56px);   
+        }
+        &__text{
+            left: 500px;
+            top: 70px;
+            width: 445px;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.ready{
+    &__title{
+        text-align: center;
+        @extend %title__font;
+        input-security:  text(32px,36px);
+        color:$title-color;
+    }
+    &__label{
+        padding: 16px 115px 16px 23px;
+        opacity: 0.5;
+        border: none;
+        background: #FBFCFE;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+    }
+    &__btn{
+        margin-top: 16px;  
+        padding: 16px 100px;
+        text-align: center;
+        &:hover{
+            background-color: $btn-active;
+        }
+    }
+}
+@media only screen and (min-width:500px){
+    .ready{
+        position: relative;
+        &__title{
+            @include text(48px,56px);
+        }
+        &__label{
+            margin-left: 140px;
+        }
+        &__btn{
+            padding: 15px 26px;
+            position: absolute;
+            left:360px;
+            top:71px;
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .ready{
+        position: relative;
+        &__title{
+            text-align: left;
+        }
+        &__label{
+            position: absolute;
+            top: 9px;
+            left:565px
+        }
+        &__btn{
+            top: -6px;
+            left: 946px;
+        }
+    }
+}

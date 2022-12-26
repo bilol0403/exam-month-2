@@ -1,0 +1,69 @@
+.simple{
+    margin-top: 510px;
+    &__phone{
+        display: none;
+    }
+    &__bg{
+        display: none;
+    }
+    &__title{
+        text-align: center;
+        @extend %title__font;
+        @include text(36px,36px);
+        color:$title-color;
+    }
+    &__text{
+        margin-top: 24px;
+        width: 328px;
+        text-align: center;
+        @extend %sub__font;
+        @include text(15px, 28px);
+        color:$sub-color;
+    }
+}
+@media only screen and (min-width:500px){
+    .simple{
+        &__top{
+            padding-left: 224px;
+        }
+        &__title{
+            @include text(48px,56px);
+            padding-left: 75px;
+        }
+        &__text{
+            width: 573px;
+            padding-left: 138px;
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .simple{
+        position: relative;
+        &__img{
+            display: none;
+        }
+        &__bg{
+            display: flex;
+        }
+        &__phone{
+            display: flex;
+        }
+        &__top{
+            display: flex;
+            padding-left: 456px;
+        }
+        &__title{
+            padding-left: 0;
+            position: absolute;
+            top:128px;
+            text-align: left;
+        }
+        &__text{
+            width: 445px;
+            padding-left: 0;
+            position: absolute;
+            top:178px;
+            text-align: left;
+        }
+    }
+}
